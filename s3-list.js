@@ -42,6 +42,9 @@ app.get('/',function(req,res){
 
   var returnS3 = function(result){
 
+    result = JSON.stringify(result);
+    result = JSON.parse(result);
+
   	var body = '<html>'
   		+'	<head>'
   		+'	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>'
