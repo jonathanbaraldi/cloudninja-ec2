@@ -41,9 +41,7 @@ app.get('/',function(req,res){
   });
 
   var returnS3 = function(result){
-
     result = JSON.stringify(result);
-    result = JSON.parse(result);
 
   	var body = '<html>'
   		+'	<head>'
@@ -53,7 +51,7 @@ app.get('/',function(req,res){
   		+	result
   		+'	</body>'
   	    +'</html>';
-
+    console.log(result);
     res.writeHead(200,{"Content-Type" : "text/html"});
     res.write(body);
     res.end();
